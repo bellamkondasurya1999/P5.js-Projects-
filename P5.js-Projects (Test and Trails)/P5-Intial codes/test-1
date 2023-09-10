@@ -1,0 +1,14 @@
+var song;
+
+function preload() {
+  song = loadSound('012.mp3');
+}
+
+function setup() {
+  createCanvas(400, 400);
+  song.play();
+}
+
+function draw() {
+  background(220);
+}

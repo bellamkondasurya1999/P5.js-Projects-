@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vocal Analysis and Animation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
+</head>
+<body>
+  <script>
+    let mic;
+    let amplitude;
+    let threshold = 0.3;
+
+    function setup() {
+      createCanvas(400, 400);
+
+      mic = new p5.AudioIn();
+      mic.start();
+
+      amplitude = new p5.Amplitude();
+      amplitude.setInput(mic);
+    }
+
+    function draw() {
+      background(220);
+
+      let level = amplitude.getLevel();
+
+      if (level > threshold) {
+        // Placeholder animation logic
+        let size = map(level, threshold, 1, 0, 200);
+        let color = map(level, threshold, 1, 0, 255);
+        fill(color, 0, 0);
+        ellipse(width / 2, height / 2, size, size);
+      }
+    }
+  </script>
+</body>
+</html>

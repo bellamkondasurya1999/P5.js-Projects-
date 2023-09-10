@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+  <script src="your-script-file.js"></script>
+</head>
+<body>
+  <div id="controls">
+    <button onclick="toggleAudio()">Toggle Audio</button>
+    <label for="bgColorSlider">Background Color:</label>
+    <input type="range" id="bgColorSlider" min="0" max="255" value="0" step="1" oninput="changeBgColor(this.value)">
+  </div>
+</body>
+</html>

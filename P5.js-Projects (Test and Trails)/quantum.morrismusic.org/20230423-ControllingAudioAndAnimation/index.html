@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="p5.js"></script><br>
+  <script type="text/javascript" src="https://cdn.cycling74.com/rnbo/latest/rnbo.min.js"></script>
+  <script src="app.js" defer></script>
+  <script src="p5.js"></script>
+
+  <title>RNBO-Processing</title>
+</head>
+<body>
+
+<div style="padding: 50px">
+This attempt by Tim creates sliders in JavaScript (in the HTML file), and both RNBO audio and P5js ("Processing") animation are controlled by the Frequency slider. It includes a Start Audio button.<br/><br/>
+
+JM
+
+  <header><h1>RNBO Sliders</h1></header><br>
+  The following sliders call "app.js" generated from RNBO export.<br>
+  
+
+    <button id="start-button">Start Audio</button><br>
+
+    
+    <label for="freq-slider">Oscillator Frequency (20-2000Hz):<span id="dynamicSet"></span></label><br>
+    <input type="range" id="freq-slider" min="20" max="2000" value="220"><br>
+    
+
+    <label for="vol-slider">Master Volume (0-100%)</label>
+    <input type="range" id="vol-slider" min="0" max="127" value="100"><br>
+
+  <header><h1>Processing</h1></header><br>
+  Processing calls "sketch.js" which grabs slider frequency data and visually uses it.<br>
+  <script src="sketch.js"></script>
+
+
+</body>
+</html>
